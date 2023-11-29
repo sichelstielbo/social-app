@@ -23,6 +23,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path='/explore' element={<Explore />} />
           <Route path='/saved' element={<Saved />} />
+          {/* @ts-expect-error Server Component */}
           <Route path='/all-users' element={<AllUsers />} />
           <Route path='/create-post' element={<CreatePost />} />
           <Route path='/update-post/:id' element={<EditPost />} />

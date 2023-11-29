@@ -332,6 +332,7 @@ export async function deletePost(postId: string, imageId: string) {
 
 export async function getInfinitePosts({ pageParam }: { pageParam: number }) {
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const queries: any[] = [Query.orderDesc('$updatedAt'), Query.limit(12)]
 
     if (pageParam) {
@@ -400,6 +401,7 @@ export async function getUserPosts(userId?: string) {
 }
 
 export async function getUsers(limit?: number) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const queries: any[] = [Query.orderDesc("$createdAt")];
 
     if (limit) {
